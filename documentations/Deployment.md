@@ -12,6 +12,7 @@ sudo chmod 755 docker_setup.sh
 
 ### Run this to up the services under (~/oompa-loompa-devops)
 docker-compose build
+
 docker-compose up -d
 
 ### Run this to stop the services under (~/oompa-loompa-devops)
