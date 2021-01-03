@@ -192,7 +192,7 @@ Test coverage is 45-50%. I have Covered Most Required Test Cases
 *** 
 
 #### Postman collection:
-Use this postman collection to test the api service [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.md)
+Use this postman collection to test the api service [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.json)
 
 #### Swagger UI
 
