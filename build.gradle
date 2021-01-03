@@ -1,0 +1,60 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.1'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.napptilus.willywonka'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	maven { url 'https://repo.spring.io/milestone' }
+	mavenCentral()
+}
+
+ext {
+	set('springCloudVersion', "2020.0.0")
+	set('jasyptSpringbootVersion', '3.0.3')
+	set('embeddedMongoVersion', '2.2.0')
+	set('ioSpringfoxVersion', '3.0.0')
+	set('commonsLangVersion', '3.11')
+}
+
+dependencies {
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation "com.github.ulisesbocchio:jasypt-spring-boot-starter:${jasyptSpringbootVersion}"
+	implementation "io.springfox:springfox-boot-starter:${ioSpringfoxVersion}"
+	implementation group: 'org.apache.commons', name: 'commons-lang3', version: "${commonsLangVersion}"
+
+	if (project.hasProperty("embedded")) { //dev and test will use embedded
+		implementation group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: "${embeddedMongoVersion}"
+	}
+
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation group: 'de.flapdoodle.embed', name: 'de.flapdoodle.embed.mongo', version: "${embeddedMongoVersion}"
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
