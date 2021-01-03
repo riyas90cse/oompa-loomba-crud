@@ -2,7 +2,9 @@
 
 ### Run this one time setup
 git clone https://github.com/riyas90cse/oompa-loompa-devops.git
+
 cd oompa-loompa-devops
+
 sudo chmod 755 docker_setup.sh
 
 ### Run this to build docker base image under (~/oompa-loompa-devops)
