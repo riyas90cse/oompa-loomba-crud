@@ -1,6 +1,6 @@
 ### Requriement Specification
 Hi!
-Our team here at Napptilus Tech Labs just received a requirement to develop a website to manage the ​ Oompa Loompa ​ 's crew of Willy Wonka's chocolate factory. Some
+Our team just received a requirement to develop a website to manage the ​ Oompa Loompa ​ 's crew of Willy Wonka's chocolate factory. Some
 kind of help to the company’s Human Resources dpt. (they are very modern in some aspects and they have smartphones and access to the Internet, for instance).
 However, we need you to help Willy Wonka to code a server that provides a tool to manage all Oompa Loompas.
 
