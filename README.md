@@ -47,7 +47,7 @@ detailed information about deployment go the location mentioned below and see th
 
 ###### API Contract Specs
 
-The API Specs Contract Documentation is find in the Api-contract.md from the documentations folder. [link]([link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md))
+The API Specs Contract Documentation is find in the Api-contract.md from the documentations folder. [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md)
 
 ###### Author
     Name  : Mohamed Riyas
