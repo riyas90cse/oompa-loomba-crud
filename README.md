@@ -35,6 +35,14 @@ This test is aimed at knowing how you code a server, the technical decisions you
 the process and the overall cleanliness of your code. ​ Happy coding! Please share a Github
 repository with us or just send a Zip file.
 
+### Deployment Instructions
+
+We have Used Docker for containerization and docker-compose for deployment in our project, for further
+detailed information about deployment go the location mentioned below and see the detailed specifications.
+
+1. Go to documentations folder
+2. Follow the Instructions given in Deployment.md file
+
 ### Solution Approach
 
 ###### Author
@@ -224,10 +232,15 @@ Apache Commons Lang, a package of Java utility classes for the classes that are 
 ###### References
 https://commons.apache.org/
 
-### Deployment Instructions
+##### Docker (For containerization) && Docker Compose (For Deployment)
+###### Objective
 
-We have Used Docker for containerization and docker-compose for deployment in our project, for further
-detailed information about deployment go the location mentioned below and see the detailed specifications.
+Docker is an open platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.
 
-1. Go to documentations folder
-2. Follow the Instructions given in Deployment.md
+Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services.
+
+###### References
+* Docker Docs - https://docs.docker.com/get-started/overview/
+* Docker Compose Doc - https://docs.docker.com/compose/
