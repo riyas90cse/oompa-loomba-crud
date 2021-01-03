@@ -223,3 +223,11 @@ Apache Commons Lang, a package of Java utility classes for the classes that are 
 
 ###### References
 https://commons.apache.org/
+
+### Deployment Instructions
+
+We have Used Docker for containerization and docker-compose for deployment in our project, for further
+detailed information about deployment go the location mentioned below and see the detailed specifications.
+
+1. Go to documentations folder
+2. Follow the Instructions given in Deployment.md
