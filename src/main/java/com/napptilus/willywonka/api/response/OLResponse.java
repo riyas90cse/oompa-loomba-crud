@@ -1,8 +1,10 @@
 package com.napptilus.willywonka.api.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 /**
@@ -10,6 +12,8 @@ import lombok.Data;
  * OompaLoompa Response Dto
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class OLResponse {

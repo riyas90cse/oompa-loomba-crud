@@ -1,4 +1,5 @@
-### Business Requriement Specification
+### Business Requirement Specification
+
 To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate factory. Code a server that provides a tool to manage all Oompa Loompas.
 
 ##### 1. Each Oompa Loompa owns the following information:
@@ -8,7 +9,7 @@ To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate fa
     - Height
     - Weight
     - Description
-  
+
 ##### 2. The server must fulfill the following API features:
     - Get the list of Oompa Loompas. For that list, only name, age and job are required per
       Oompa Looma.
@@ -21,7 +22,7 @@ To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate fa
       have used and explain the reason why you’ve used them.
     - Use docker
     - Use either Couchbase, MongoDB or MySql for your database
-  
+
 ##### 4. Nice to have features (Bonus):
     - Be creative!
     - Error handling
@@ -33,23 +34,16 @@ To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate fa
 
 ### Deployment Instructions
 
-We have Used Docker for containerization and docker-compose for deployment in our project, for further
-detailed information about deployment go the location mentioned below and see the detailed specifications.
-
-1. Go to documentations folder
-2. Follow the Instructions given in Deployment.md file [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Deployment.md)
+Docker has been used for containerization and docker compose for deployment in the project, for further
+detailed information about deployment, go to `documentations` folder and see the detailed instructions given in [Deployment.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Deployment.md) file.
 
 ### Solution Approach
 
 ###### API Contract Specs
 
-The API Specs Contract Documentation is find in the Api-contract.md from the documentations folder. [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md)
+The API Specs Contract Documentation is find in the [Api-contract.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md) from the `documentations` folder.
 
-###### Author
-    Name  : Mohamed Riyas
-    Email : riyas90cse@gmail.com
-  
-###### Tools & Techology Stack Used
+###### Tools & Technology Stack Used
 * Java 11
 * Spring Boot
 * MongoDB
@@ -68,16 +62,17 @@ The API Specs Contract Documentation is find in the Api-contract.md from the doc
 * Docker (For containerization)
 * Docker Compose (For Deployment)
 
-The Above tools and technology stack specifications are find in the document HELP.md from documentations folder. [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/HELP.md)
+The Above tools and technology stack specifications are find in the document [HELP.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/HELP.md) from `documentations` folder.
 
 ##### Execute the application:
 The app uses JasyptSpringBoot for encrypting plain text in the application properties. The encryption requires environment based password. The spring boot application has two profiles defined.
+
 * dev
 * prod
 
 In order to execute the application, there are two values set in the system environment.
 
-1. SPRING_PROFILES_ACTIVE=<profile>
+1. SPRING_PROFILES_ACTIVE=`dev` or `prod`
 2. APP_ENCRYPTION_PASSWORD=napptilus-service
 
 The value `napptilus-service` is used to encrypt the plaintext. You can use a different password to encrypt the values which might require changing the ENC() values defined in this application properties.
@@ -179,11 +174,11 @@ JUnit 5, Spring Test have been used along with Mockito, reactor-test. There are 
 * 1 unit test
 * 2 integration tests
 
-Test coverage is 45-50%. I have Covered Most Required Test Cases 
+Test coverage is 45-50%. Tests are aimed to cover most required test cases.
 
 ***
 
-#### Improvements to consider:
+### Improvements to consider:
 1. Hamcrest can be used.
 2. Avoid setter injection, use constructor injection.
 3. The application can be slightly modified to cover more tests.
@@ -191,14 +186,15 @@ Test coverage is 45-50%. I have Covered Most Required Test Cases
 
 *** 
 
-#### Postman collection:
-Use this postman collection to test the api service [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.json)
+### Postman collection:
+Use this [postman collection](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.json) to test the api service.
 
-#### Swagger UI
+*** 
 
-I have used the OpenAPI(Swagger3) for API Documentation where we can find the controller API to test, It would be more use full to test with backend GUI.
+### Swagger UI
 
-Once Application is Runned we can find the Swagger UI in below URI
+OpenAPI(Swagger3) has been used for API Documentation. As soon as application is up, the swagger ui can be found under the below URI.
+
 > http://localhost:20211/swagger-ui/
 
 
