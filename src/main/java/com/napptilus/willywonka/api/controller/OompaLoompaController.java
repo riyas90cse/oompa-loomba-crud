@@ -26,7 +26,7 @@ import static org.apache.commons.lang3.StringUtils.isNumeric;
  * OompaLoompa Rest Controller
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/oompaloompas")
 @Slf4j
 public class OompaLoompaController {
 

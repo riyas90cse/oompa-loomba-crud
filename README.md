@@ -45,6 +45,10 @@ detailed information about deployment go the location mentioned below and see th
 
 ### Solution Approach
 
+###### API Contract Specs
+
+The API Specs Contract Documentation is find in the Api-contract.md from the documentations folder. [link]([link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md))
+
 ###### Author
     Name  : Mohamed Riyas
     Email : riyas90cse@gmail.com
@@ -199,6 +203,6 @@ Use this postman collection to test the api service [link](https://github.com/ri
 I have used the OpenAPI(Swagger3) for API Documentation where we can find the controller API to test, It would be more use full to test with backend GUI.
 
 Once Application is Runned we can find the Swagger UI in below URI
-> http://localhost:20211/swagger-ui
+> http://localhost:20211/swagger-ui/
 
 
