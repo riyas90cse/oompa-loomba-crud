@@ -1,8 +1,5 @@
 ### Business Requriement Specification
-Hi!
-Our team just received a requirement to develop a website to manage the ​ Oompa Loompa ​ 's crew of Willy Wonka's chocolate factory. Some
-kind of help to the company’s Human Resources dpt. (they are very modern in some aspects and they have smartphones and access to the Internet, for instance).
-However, we need you to help Willy Wonka to code a server that provides a tool to manage all Oompa Loompas.
+To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate factory. Code a server that provides a tool to manage all Oompa Loompas.
 
 ##### 1. Each Oompa Loompa owns the following information:
     - Name
@@ -18,14 +15,14 @@ However, we need you to help Willy Wonka to code a server that provides a tool t
     - Get the full detail of an Oompa Loompa
     - Add a new Oompa Loompa
     - Edit a current Oompa Loompa
-##### 3. Specifications:
+##### 3. Tech Specifications:
     - Use Spring Boot framework
     - Use as many third party libraries as you want but, please, document all libraries you
       have used and explain the reason why you’ve used them.
     - Use docker
     - Use either Couchbase, MongoDB or MySql for your database
   
-##### 4. Bonus:
+##### 4. Nice to have features (Bonus):
     - Be creative!
     - Error handling
     - Response caching
@@ -38,23 +35,30 @@ This test is aimed at knowing how you code a server, the technical decisions you
 the process and the overall cleanliness of your code. ​ Happy coding! Please share a Github
 repository with us or just send a Zip file.
 
-### Solution Overview
+### Solution Approach
 
 ###### Author
     Name  : Mohamed Riyas
     Email : riyas90cse@gmail.com
   
 ###### Tools & Techology Stack Used
-  * Java 11 
-  * Spring Boot
-  * REST API
-  * Spring WebFulx (Reative Programming)
-  * Lombok
-  * JUnit 5 & Mockito
-  * Embeded Mongo DB (For Developement Environment)
-  * Standalone Mongo DB (For Production Environment)
-  * Swagger (API Documentation)
-  * Docker & Docker Compose (For Deployment)
+* Java 11
+* Spring Boot
+* MongoDB
+* Spring WebFlux
+* REST API
+* Lombok
+* JUnit 5 & Mockito
+* Gradle (Build Tool)
+* Logback (For logging)
+* Jasypt Spring Boot (For encryption)
+* Reactor (Reactive Programming)
+* Apache Commons
+* Embedded Mongo DB (For Development and Test Environment)
+* Mongo Docker Container (For Staging Environment)
+* OpenAPI (Swagger Documentation)
+* Docker (For containerization)
+* Docker Compose (For Deployment)
 
 ### Specification For Tools & Technology Used
 ##### Java 11
@@ -102,7 +106,7 @@ Like any other architectural style, REST also does have its own 6 guiding constr
 * Spring Rest Docs - https://spring.io/guides/tutorials/rest/
 * Rest API Standards - https://restfulapi.net/
 
-##### Spring WebFulx (Reative Programming)
+##### Spring WebFulx
 ###### Objective
 The original web framework included in the Spring Framework, Spring Web MVC, was purpose-built for the Servlet API and Servlet containers. The reactive-stack web framework, Spring WebFlux, was added later in version 5.0. It is fully non-blocking, supports Reactive Streams back pressure, and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers.
 Both web frameworks mirror the names of their source modules (spring-webmvc and spring-webflux) and co-exist side by side in the Spring Framework. Each module is optional. Applications can use one or the other module or, in some cases, both — for example, Spring MVC controllers with the reactive WebClient.
@@ -164,7 +168,7 @@ The Above 5 features are some of the most important core features.
 ###### References
 https://docs.mongodb.com/
 
-##### Swagger
+##### OpenAPI (Swagger Documentation)
 ###### Objective
 Swagger is a set of open-source tools built around the OpenAPI Specification that can help you design, build, document and consume REST APIs. The major Swagger tools include:
 
@@ -177,3 +181,45 @@ Swagger UI allows anyone — be it your development team, or your end consumers 
 
 ###### References
 https://swagger.io/tools/swagger-ui/
+
+##### Logback (For logging)
+###### Objective
+Logback is intended as a successor to the popular log4j project, picking up where log4j leaves off.
+
+Logback's architecture is sufficiently generic so as to apply under different circumstances. At present time, logback is divided into three modules, logback-core, logback-classic and logback-access.
+
+The logback-core module lays the groundwork for the other two modules. The logback-classic module can be assimilated to a significantly improved version of log4j. Moreover, logback-classic natively implements the SLF4J API so that you can readily switch back and forth between logback and other logging frameworks such as log4j or java.util.logging (JUL).
+
+The logback-access module integrates with Servlet containers, such as Tomcat and Jetty, to provide HTTP-access log functionality. Note that you could easily build your own module on top of logback-core.
+
+###### References
+http://logback.qos.ch/documentation.html
+
+##### Jasypt Spring Boot (For encryption)
+###### Objective
+Enable Jasypt to encrypt configuration file attributes in a Spring Boot application for decrypting and use at runtime.
+
+###### References
+https://github.com/ulisesbocchio/jasypt-spring-boot
+
+##### Reactor (Reactive Programming)
+###### Objective
+Reactor is a reactive programming library for the Java language which provides the basis for developing non-blocking applications, thus representing a change in how we think about an application's execution model.
+
+Reactor is a fourth-generation reactive library, based on the Reactive Streams specification, for building non-blocking applications on the JVM
+
+Reactor is fully non-blocking and provides efficient demand management. It directly interacts with Java's functional API, CompletableFuture, Stream, and Duration.
+
+Reactor offers two reactive and composable APIs, Flux [N] and Mono [0|1], which extensively implement Reactive Extensions.
+
+Well-suited for a microservices architecture, Reactor offers backpressure-ready network engines for HTTP (including Websockets), TCP, and UDP.
+
+###### References
+https://projectreactor.io/
+
+##### Apache Commons
+###### Objective
+Apache Commons Lang, a package of Java utility classes for the classes that are in java.lang's hierarchy, or are considered to be so standard as to justify existence in java.lang.
+
+###### References
+https://commons.apache.org/
