@@ -37,3 +37,20 @@ However, we need you to help Willy Wonka to code a server that provides a tool t
 This test is aimed at knowing how you code a server, the technical decisions you take along
 the process and the overall cleanliness of your code. ​ Happy coding! Please share a Github
 repository with us or just send a Zip file.
+
+### Solution Overview
+
+  ###### Author
+    Name  : Mohamed Riyas
+    Email : riyas90cse@gmail.com
+  
+  ###### Tools & Techology Stack Used
+  * Java 11 
+  * Spring Boot 
+  * Spring WebFulx (Reative Programming)
+  * Lombok
+  * JUnit 5 & Mockito
+  * Embeded Mongo DB (For Developement Environment)
+  * Standalone Mongo DB (For Production Environment)
+  * Swagger (API Documentation)
+  * Docker & Docker Compose (For Deployment)
