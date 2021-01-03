@@ -2,7 +2,7 @@ package com.napptilus.willywonka.config;
 
 import com.napptilus.willywonka.helper.AuthHelper;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.config.CorsRegistry;
 import org.springframework.web.reactive.config.WebFluxConfigurer;
 
@@ -10,7 +10,7 @@ import org.springframework.web.reactive.config.WebFluxConfigurer;
  * @author Mohamed Riyas (riyas90cse@gmail.com)
  * Web Configuration Component
  */
-@Component
+@Configuration
 public class WebConfig implements WebFluxConfigurer {
 
     /**

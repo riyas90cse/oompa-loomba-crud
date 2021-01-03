@@ -4,6 +4,7 @@ import com.napptilus.willywonka.api.request.OLRequest;
 import com.napptilus.willywonka.api.response.OLResponse;
 import com.napptilus.willywonka.document.OompaLoompa;
 import com.napptilus.willywonka.reactive.service.IOompaLoompaService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,6 +49,7 @@ public class OompaLoompaController {
      * @param limit records count per page
      * @return list of oompa loompa
      */
+    @ApiOperation(value = "Get All OompaLoompa Objects")
     @GetMapping
     public ResponseEntity<Flux<OLResponse>> getAllOompaLoompas(@RequestParam(value = "page", required = false) String page,
                                                                @RequestParam(value = "limit", required = false) String limit) {
@@ -66,6 +68,7 @@ public class OompaLoompaController {
      * @param id string
      * @return OompaLoompa Object
      */
+    @ApiOperation(value = "Get Oompa Loompa Object By Id")
     @GetMapping("/{id}")
     public ResponseEntity<Mono<OompaLoompa>> getOompaLoompaByID(@PathVariable("id") String id) {
         LOG.info("Open getOompaLoompaByID {}", this.getClass().getSimpleName());
@@ -77,6 +80,7 @@ public class OompaLoompaController {
      * @param olRequest Oompaloompa dto
      * @return Oompaloompa object
      */
+    @ApiOperation(value = "Save Oompa Loompa")
     @PostMapping
     public ResponseEntity<Mono<OompaLoompa>> addOompaLoompa(@RequestBody OLRequest olRequest) {
         LOG.info("Open addOompaLoompa {}", this.getClass().getSimpleName());
@@ -93,6 +97,7 @@ public class OompaLoompaController {
      * @param olRequest oompaloompa dto
      * @return oompaloompa Object
      */
+    @ApiOperation(value = "Update OompaLoompa")
     @PutMapping("/{id}")
     public ResponseEntity<Mono<OompaLoompa>> updateOompaLoompaByID(@PathVariable("id") String id, @RequestBody OLRequest olRequest) {
         LOG.info("Open updateOompaLoompaByID {}", this.getClass().getSimpleName());
