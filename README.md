@@ -31,10 +31,6 @@ To develop a website to manage Oompa Loompa's crew of Willy Wonka's chocolate fa
     - Paginate the list of Oompa Loompas
     - Fork your repo and use a different database
 
-This test is aimed at knowing how you code a server, the technical decisions you take along
-the process and the overall cleanliness of your code. ​ Happy coding! Please share a Github
-repository with us or just send a Zip file.
-
 ### Deployment Instructions
 
 We have Used Docker for containerization and docker-compose for deployment in our project, for further
