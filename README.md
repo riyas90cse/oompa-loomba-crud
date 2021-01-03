@@ -37,7 +37,7 @@ We have Used Docker for containerization and docker-compose for deployment in ou
 detailed information about deployment go the location mentioned below and see the detailed specifications.
 
 1. Go to documentations folder
-2. Follow the Instructions given in Deployment.md file
+2. Follow the Instructions given in Deployment.md file [link](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Deployment.md)
 
 ### Solution Approach
 
