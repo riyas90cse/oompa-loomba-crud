@@ -79,7 +79,7 @@ public class OompaLoompaAPITest {
                 .createdAt(Date.from(Instant.now())).updatedAt(Date.from(Instant.now())).build();
         oompaLoompaService.save(oompaLoompa);
 
-        Flux<OLResponse> olResponseFlux = webClient.get().uri(uriHost + serverPort + "/api")
+        Flux<OLResponse> olResponseFlux = webClient.get().uri(uriHost + serverPort + "/api/oompaloompas")
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .retrieve().bodyToFlux(OLResponse.class);
 
@@ -103,7 +103,7 @@ public class OompaLoompaAPITest {
                 .jobTitle("Developer").description("Joined on May 2019").build();
 
         Mono<OompaLoompa> oompaLoompaMono = webClient.post()
-                .uri(uriHost + serverPort + "/api")
+                .uri(uriHost + serverPort + "/api/oompaloompas")
                 .accept(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromValue(oompaLoompa))
                 .retrieve().bodyToMono(OompaLoompa.class);
@@ -139,7 +139,7 @@ public class OompaLoompaAPITest {
                 .jobTitle("Supervisor").description("Joined on Dec 2016").build();
 
         Mono<OompaLoompa> oompaLoompaMono = webClient.put()
-                .uri(uriHost + serverPort + "/api/" + updatedId)
+                .uri(uriHost + serverPort + "/api/oompaloompas/" + updatedId)
                 .accept(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromValue(modifiedOompaLoompa))
                 .retrieve().bodyToMono(OompaLoompa.class);

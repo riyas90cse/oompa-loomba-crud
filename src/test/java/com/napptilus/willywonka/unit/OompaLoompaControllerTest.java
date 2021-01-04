@@ -84,7 +84,7 @@ public class OompaLoompaControllerTest {
 
         Mockito.when(oompaLoompaService.findAll()).thenReturn(oompaLoompaFlux);
 
-        List<OompaLoompa> oompaLoompaList = webClient.get().uri("/api")
+        List<OompaLoompa> oompaLoompaList = webClient.get().uri("/api/oompaloompas")
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .exchange()
                 .expectStatus().isOk()
@@ -113,7 +113,7 @@ public class OompaLoompaControllerTest {
 
         Mockito.when(oompaLoompaService.findById("9456789987678")).thenReturn(oompaLoompaMono);
 
-        webClient.get().uri("/api/{id}", "9456789987678")
+        webClient.get().uri("/api/oompaloompas/{id}", "9456789987678")
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .exchange()
                 .expectStatus().isOk()
@@ -140,7 +140,7 @@ public class OompaLoompaControllerTest {
 
         Mockito.when(oompaLoompaService.findById("9456789987678")).thenReturn(oompaLoompaMono);
 
-        webClient.get().uri("/api/{id}", "9456789987678")
+        webClient.get().uri("/api/oompaloompas/{id}", "9456789987678")
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE)
                 .exchange()
                 .expectStatus().isOk()
@@ -171,7 +171,7 @@ public class OompaLoompaControllerTest {
         Mockito.when(oompaLoompaService.save(any())).thenReturn(Mono.just(oompaLoompa));
 
         OompaLoompa responseBody = webClient.post()
-                .uri("/api")
+                .uri("/api/oompaloompas")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromValue(oompaLoompa))
                 .exchange()
@@ -204,7 +204,7 @@ public class OompaLoompaControllerTest {
         Mockito.when(oompaLoompaService.save(any())).thenReturn(Mono.just(updatedOompaLoompa));
 
         OompaLoompa responseBody = webClient.put()
-                .uri("/api/{id}", "567898765678")
+                .uri("/api/oompaloompas/{id}", "567898765678")
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(BodyInserters.fromValue(oompaLoompa))
                 .exchange()

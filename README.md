@@ -185,6 +185,11 @@ JUnit 5, Spring Test have been used along with Mockito, reactor-test. There are 
 
 Test coverage is 45-50%. Tests are aimed to cover most required test cases.
 
+In order to execute Integration Test please ensure the following system environment, there are two values set in the system environment.
+
+1. SPRING_PROFILES_ACTIVE=`dev`
+2. APP_ENCRYPTION_PASSWORD=napptilus-service
+
 ***
 
 ### Postman collection:
