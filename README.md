@@ -41,7 +41,7 @@ detailed information about deployment, go to `documentations` folder and see the
 
 ###### API Contract Specs
 
-The API Specs Contract Documentation is find in the [Api-contract.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md) from the `documentations` folder.
+The API Specs Contract Documentation is found in the [Api-contract.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/Api-contract.md) from the `documentations` folder.
 
 ###### Tools & Technology Stack Used
 * Java 11
@@ -62,7 +62,7 @@ The API Specs Contract Documentation is find in the [Api-contract.md](https://gi
 * Docker (For containerization)
 * Docker Compose (For Deployment)
 
-The Above tools and technology stack specifications are find in the document [HELP.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/HELP.md) from `documentations` folder.
+The Above tools and technology stack specifications are found in the document [HELP.md](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/HELP.md) from `documentations` folder.
 
 ##### Execute the application:
 The app uses JasyptSpringBoot for encrypting plain text in the application properties. The encryption requires environment based password. The spring boot application has two profiles defined.
@@ -107,7 +107,7 @@ To run only tests, execute the following.
 `./gradlew test`
 
 ###### Gotcha #1:
-In order to test the application, CORS is enabled for all. You can find `*` in the app origins.
+In order to test the application, CORS is enabled for all. You can found `*` in the app origins.
 
 napptilus.app.origins = https://oompa-service.napptilus.com,*
 
@@ -168,6 +168,15 @@ There is a dedicated project to set up docker container. It has various scripts 
 
 ***
 
+### Swagger UI
+
+OpenAPI(Swagger3) has been used for API Documentation. As soon as application is up, the swagger ui can be found under the below URI.
+
+> http://localhost:20211/swagger-ui/
+> 
+![Screenshot](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/screenshot-swagger.png)
+*** 
+
 ### Tests
 JUnit 5, Spring Test have been used along with Mockito, reactor-test. There are 3 tests.
 
@@ -178,23 +187,17 @@ Test coverage is 45-50%. Tests are aimed to cover most required test cases.
 
 ***
 
+### Postman collection:
+Use this [postman collection](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.json) to test the api service.
+
+***
+
 ### Improvements to consider:
 1. Hamcrest can be used.
 2. Avoid setter injection, use constructor injection.
 3. The application can be slightly modified to cover more tests.
-4. Use kubernetes instead of docker compose.
+4. Can Use kubernetes instead of docker compose.
 
 *** 
-
-### Postman collection:
-Use this [postman collection](https://github.com/riyas90cse/oompa-loomba-crud/blob/main/documentations/data/napptilus-api.json) to test the api service.
-
-*** 
-
-### Swagger UI
-
-OpenAPI(Swagger3) has been used for API Documentation. As soon as application is up, the swagger ui can be found under the below URI.
-
-> http://localhost:20211/swagger-ui/
 
 
